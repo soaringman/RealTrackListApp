@@ -13,6 +13,7 @@
 		09E01BD7271862E600B56771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E01BD6271862E600B56771 /* Assets.xcassets */; };
 		09E01BDA271862E600B56771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E01BD8271862E600B56771 /* LaunchScreen.storyboard */; };
 		09E01BE22718641900B56771 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E01BE12718641900B56771 /* TrackListViewController.swift */; };
+		09E01BE42718795D00B56771 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E01BE32718795D00B56771 /* TrackModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		09E01BD9271862E600B56771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E01BDB271862E600B56771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E01BE12718641900B56771 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		09E01BE32718795D00B56771 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				09E01BCD271862E500B56771 /* AppDelegate.swift */,
 				09E01BCF271862E500B56771 /* SceneDelegate.swift */,
 				09E01BE12718641900B56771 /* TrackListViewController.swift */,
+				09E01BE32718795D00B56771 /* TrackModel.swift */,
 				09E01BD8271862E600B56771 /* LaunchScreen.storyboard */,
 				09E01BD3271862E500B56771 /* Main.storyboard */,
 				09E01BD6271862E600B56771 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E01BCE271862E500B56771 /* AppDelegate.swift in Sources */,
+				09E01BE42718795D00B56771 /* TrackModel.swift in Sources */,
 				09E01BD0271862E500B56771 /* SceneDelegate.swift in Sources */,
 				09E01BE22718641900B56771 /* TrackListViewController.swift in Sources */,
 			);
