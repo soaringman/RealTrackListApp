@@ -50,7 +50,10 @@ class TrackListViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        let trackDetailsVC = segue.destination as! TrackDetailsViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let track = trackList[indexPath.row]
+        trackDetailsVC.track = track
     }
 
 }
