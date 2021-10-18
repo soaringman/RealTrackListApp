@@ -43,6 +43,12 @@ class TrackListViewController: UITableViewController {
         return cell
     }
 
+    //MARK: - if use program segue from TrackListViewController to TrackDetailsViewController
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedTrack = trackList[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: selectedTrack)
+    }
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
@@ -51,9 +57,11 @@ class TrackListViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let trackDetailsVC = segue.destination as! TrackDetailsViewController
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let track = trackList[indexPath.row]
-        trackDetailsVC.track = track
+//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//        let track = trackList[indexPath.row]
+//        делаем через as? потому что свойство опциональное и track так же опциональное
+//        кастим до типа Track
+        trackDetailsVC.track = sender as? Track
     }
 
 }

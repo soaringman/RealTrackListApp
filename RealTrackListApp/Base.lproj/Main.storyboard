@@ -40,9 +40,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="MnB-wE-L0g" kind="show" id="yBE-lK-OEX"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,6 +48,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Track List" id="e3z-Yk-QbQ"/>
+                    <connections>
+                        <segue destination="MnB-wE-L0g" kind="show" identifier="showDetails" id="cNs-dc-HfP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYO-t3-rhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
