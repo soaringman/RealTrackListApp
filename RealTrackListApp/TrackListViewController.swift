@@ -44,8 +44,23 @@ class TrackListViewController: UITableViewController {
         let selectedTrack = trackList[indexPath.row]
         performSegue(withIdentifier: "showDetails", sender: selectedTrack)
     }
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    //убираем иконку удаления строки
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+    
+    //убираем место под иконку удаления строки
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+    
+    //в результате того что убрали возможность показа "бургеров" в режиме редактирования в предыдущем методе,
+    //добавляем метод который позволяет это делать
+    //добавляем логику перемещения трека
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let currentTrack = trackList.remove(at: sourceIndexPath.row)
+        trackList.insert(currentTrack, at: destinationIndexPath.row)
     }
     
     // MARK: - Navigation
